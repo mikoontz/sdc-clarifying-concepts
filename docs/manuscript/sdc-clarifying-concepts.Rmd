@@ -1,0 +1,58 @@
+---
+bibliography: ../docs_carpentry/sdc-clarifying-concepts.bib
+csl: ../docs_carpentry/landscape-ecology.csl
+params:
+  title: Stand-replacing decay coefficient-- clarifying concepts and extensions
+  author: |
+    Michael J. Koontz^1,2,\*^,
+    Others?
+  affiliation: |
+    ^1^Graduate Group in Ecology, University of Californa, Davis, CA, USA  
+    ^2^Department of Plant Sciences, University of California, Davis, CA, USA  
+  correspondence: |
+    michael.koontz@colorado.edu
+  date_generated: !r format(Sys.Date(), "%B %d, %Y")
+geometry: margin=1in
+header-includes:
+  - \usepackage[left]{lineno}
+  - \linenumbers
+  - \usepackage{setspace}
+  - \doublespacing
+  - \DeclareUnicodeCharacter{200E}{}
+output: pdf_document
+---
+
+#`r params$title`
+
+`r params$author`
+
+`r params$affiliation`
+
+^\*^Correspondence: ``r params$correspondence``
+
+Date report generated: `r params$date_generated`
+
+# Abstract 
+
+# Introduction
+
+@collins2017 and @stevens2017 introduce a new metric-- the "stand-replacing decay coefficient"-- as an alternative means to characterize forest fire regimes that incorporates spatial patterns of wildfire severity. Further, @collins2017 and @stevens2017 demonstrate its utility as a broad-sense landscape metric as well as a tool for detecting drivers of changing fire regimes in a case study of California mixed-conifer systems.
+
+Benefits:
+
+1. Summarizes complex spatial configurations of severity within a wildfire in a single number.
+2. Captures key macroscale relationships between fire effects and their drivers (e.g., suppression effects, climate conditions during burning) 
+3. Is founded on critical ecological first-principles with respect to regeneration potential of dry forest without nearby seed sources.
+4. Makes clever use of fusion between probability theory and geometric theory by exactly measuring the *probability that a point will be further than X distance from the edge of an arbitrary polygon*.
+
+Limitations:
+
+1. Can only be measured on wildfires that experience any high severity fire.
+2. Doesn't incorporate any area that burns at low- to moderate-severity, or tree islands-- area within the fire perimeter that doesn't burn at all.
+3. Can be computationally demanding to calculate.
+4. Relies on an imperfectly-fitting logarithmic model to describe a relationship better defined and described in a probability framework (i.e., cumulative distribution functions, probability density functions, geometric relationships between the area of polygons and the probability of a point within them being some distance from the edge).
+5. Has no intuitive connection to measurable ecological parameters.
+
+Here, we describe the stand-replacing decay coefficient in terms of probability theory, offer a computationally less-demanding approach to approximating it (by 2 orders of magnitude), and extend the concept to a) contexts beyond fire ecology and b) incorporate less-than-stand-replacing severity in the broader-sense alternative characterization of fire regimes.
+
+# References
